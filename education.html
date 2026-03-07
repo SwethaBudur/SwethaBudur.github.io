@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Education | S Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <style>
+
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: #0a0f14;
+            color: #e0f7ff;
+            background-image: linear-gradient(rgba(0,255,255,0.05) 1px, transparent 1px),
+                              linear-gradient(90deg, rgba(0,255,255,0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            padding: 20px;
+            background: #000;
+            border-bottom: 1px solid #00ffff33;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #00ffff;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: white;
+        }
+
+        h1 {
+            text-align: center;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 42px;
+            margin-top: 40px;
+            color: #00ffff;
+            letter-spacing: 3px;
+        }
+
+        .section-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 50px;
+            padding: 60px 20px;
+        }
+
+        .card {
+            width: 500px;
+            background: #000;
+            border: 1px solid #00ffff;
+            padding: 35px;
+            box-shadow: 0 0 20px #00ffff55;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            box-shadow: 0 0 40px #00ffff;
+            transform: translateY(-5px);
+        }
+
+        .module-label {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 14px;
+            color: #00ffffaa;
+            margin-bottom: 15px;
+        }
+
+        .title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 22px;
+            margin-bottom: 20px;
+            border-left: 4px solid #00ffff;
+            padding-left: 15px;
+            text-transform: uppercase;
+        }
+
+        .highlight {
+            color: #00ffff;
+            font-weight: 500;
+        }
+
+        ul {
+            padding-left: 20px;
+            line-height: 1.8;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .card {
+                width: 95%;
+            }
+
+            h1 {
+                font-size: 32px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="skills.html">Skills</a>
+        <a href="experience.html">Experience</a>
+        <a href="projects.html">Projects</a>
+        <a href="education.html">Education</a>
+    </nav>
+
+    <h1>ACADEMIC_PROFILE</h1>
+
+    <div class="section-container">
+
+        <!-- EDUCATION -->
+        <div class="card">
+            <div class="module-label">MODULE_01</div>
+            <div class="title">Education</div>
+
+            <p><span class="highlight">Rowan University, NJ, USA</span></p>
+            <p>MS, Computer Science</p>
+            <p><span class="highlight">Rajeev Gandhi Memorial College of Engineering and Technology, India</span></p>
+            <p>B.Tech, Electronics and Communication Engineering</p>
+        </div>
+
+        <!-- CERTIFICATIONS -->
+        <div class="card">
+            <div class="module-label">MODULE_02</div>
+            <div class="title">Certifications</div>
+
+            <ul>
+                <li>AWS Certified Cloud Practitioner</li>
+                <li>Google Cloud Digital Leader</li>
+                <li>Certified in IoT Workshop</li>
+                <li>Web Design & AI – Coursera</li>
+            </ul>
+        </div>
+
+    </div>
+
+</body>
+</html>

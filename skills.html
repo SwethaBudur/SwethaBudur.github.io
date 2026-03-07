@@ -1,0 +1,193 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Stack</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: #0a0f14;
+            color: #e0f7ff;
+            background-image: linear-gradient(rgba(0,255,255,0.05) 1px, transparent 1px),
+                              linear-gradient(90deg, rgba(0,255,255,0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            padding: 20px;
+            background: #000;
+            border-bottom: 1px solid #00ffff33;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #00ffff;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: white;
+        }
+
+        h1 {
+            text-align: center;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 42px;
+            margin-top: 40px;
+            color: #00ffff;
+            letter-spacing: 3px;
+        }
+
+         .module-label {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 14px;
+            color: #00ffffaa;
+            margin-bottom: 15px;
+        }
+
+        .title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 22px;
+            text-align: centerolid #00ffff;
+            padding-left: 15px;
+            text-transform: uppercase;
+        }
+
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .skill-box {
+            background-color: #111;
+            border: 2px solid #00ffff; /* neon cyan */
+            border-radius: 10px;
+            padding: 20px;
+            flex: 1 1 250px;
+            min-width: 250px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .skill-box:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px #00ffff; /* neon cyan */
+        }
+
+        .skill-box h3 {
+            color: #00ffff; /* neon cyan */
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+
+        .skill-box span {
+            display: inline-block;
+            background-color: #111;
+            border: 1px solid #00ffff; /* neon cyan */
+            border-radius: 5px;
+            padding: 5px 10px;
+            margin: 5px 5px 0 0;
+            font-size: 0.9rem;
+            transition: 0.2s;
+        }
+
+        .skill-box span:hover {
+            background-color: #00ffff; /* neon cyan */
+            color: #0d0d0d;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="skills.html">Skills</a>
+        <a href="experience.html">Experience</a>
+        <a href="projects.html">Projects</a>
+        <a href="education.html">Education</a>
+
+    </nav>
+
+    <h1>TECHNICAL_STACK</h1>
+
+
+    <div class="skills-container">
+        <div class="skill-box">
+            <h3>Programming & Languages</h3>
+            <span>Python</span>
+            <span>Java</span>
+            <span>COBOL</span>
+            <span>C</span>
+            <span>REXX</span>
+            <span>SQL</span>
+        </div>
+
+        <div class="skill-box">
+            <h3>AI, ML & NLP</h3>
+            <span>Generative AI</span>
+            <span>LLMs</span>
+            <span>Prompt Engineering</span>
+            <span>NLP Pipelines</span>
+            <span>GPT</span>
+            <span>BERT</span>
+            <span>Model Fine-tuning</span>
+            <span>Few-shot / Zero-shot Prompting</span>
+        </div>
+
+        <div class="skill-box">
+            <h3>Cloud & DevOps</h3>
+            <span>AWS</span>
+            <span>Azure</span>
+            <span>GCP</span>
+            <span>CI/CD</span>
+            <span>Docker</span>
+            <span>Kubernetes</span>
+            <span>Git</span>
+            <span>Jenkins</span>
+        </div>
+
+        <div class="skill-box">
+            <h3>Mainframe & Databases</h3>
+            <span>IBM Db2</span>
+            <span>IMS Hierarchical DB</span>
+            <span>IBM z/OS</span>
+            <span>CICS</span>
+            <span>JCL</span>
+            <span>VSAM</span>
+            <span>Transaction Processing</span>
+        </div>
+
+        <div class="skill-box">
+            <h3>Software & Tools</h3>
+            <span>Spring Boot</span>
+            <span>React</span>
+            <span>REST APIs</span>
+            <span>Endevor</span>
+            <span>QMF</span>
+            <span>ISPF / SDSF</span>
+            <span>Swagger</span>
+            <span>Visual Studio / Eclipse</span>
+        </div>
+
+        <div class="skill-box">
+            <h3>Other Expertise</h3>
+            <span>Technical Documentation</span>
+            <span>Performance Tuning</span>
+            <span>SQL Optimization</span>
+            <span>Agile & Scrum</span>
+            <span>Regression / Performance Testing</span>
+            <span>Production Support</span>
+        </div>
+    </div>
+
+</body>
+</html>

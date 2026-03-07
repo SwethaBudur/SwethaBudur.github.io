@@ -1,0 +1,193 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Projects | S Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: #0a0f14;
+            color: #e0f7ff;
+            background-image: linear-gradient(rgba(0,255,255,0.05) 1px, transparent 1px),
+                              linear-gradient(90deg, rgba(0,255,255,0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        /* NAVBAR */
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            padding: 20px;
+            background: #000;
+            border-bottom: 1px solid #00ffff33;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #00ffff;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: white;
+        }
+
+        /* PAGE TITLE */
+        h1 {
+            text-align: center;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 42px;
+            margin-top: 40px;
+            color: #00ffff;
+            letter-spacing: 3px;
+        }
+
+        /* PROJECT CONTAINER */
+        .projects-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 40px;
+            padding: 60px 20px;
+        }
+
+        /* PROJECT CARD */
+        .project-card {
+            width: 520px;
+            background: #000;
+            border: 1px solid #00ffff;
+            padding: 30px;
+            box-shadow: 0 0 20px #00ffff55;
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            box-shadow: 0 0 40px #00ffff;
+            transform: translateY(-5px);
+        }
+
+        .module-label {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 14px;
+            color: #00ffffaa;
+            margin-bottom: 15px;
+        }
+
+        .project-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 22px;
+            margin-bottom: 20px;
+            border-left: 4px solid #00ffff;
+            padding-left: 15px;
+            text-transform: uppercase;
+        }
+
+        .tags {
+            margin-bottom: 20px;
+        }
+
+        .tag {
+            display: inline-block;
+            border: 1px solid #00ffff;
+            padding: 6px 12px;
+            margin: 5px 5px 5px 0;
+            font-size: 12px;
+            color: #00ffff;
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        ul {
+            padding-left: 18px;
+            line-height: 1.6;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .project-card {
+                width: 95%;
+            }
+
+            h1 {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="skills.html">Skills</a>
+        <a href="experience.html">Experience</a>
+        <a href="projects.html">Projects</a>
+        <a href="education.html">Education</a>
+    </nav>
+
+    <!-- PAGE TITLE -->
+    <h1>PROJECT_MODULES</h1>
+
+    <!-- PROJECTS -->
+    <div class="projects-container">
+
+        <!-- PROJECT 1 -->
+        <div class="project-card">
+            <div class="module-label">MODULE_01</div>
+            <div class="project-title">MENTAL HEALTH ASSISTANT CHATBOT</div>
+
+            <div class="tags">
+                <span class="tag">Python</span>
+                <span class="tag">LLM</span>
+                <span class="tag">NLP</span>
+                <span class="tag">Prompt Engineering</span>
+                <span class="tag">API Integration</span>
+                <span class="tag">Modular Architecture</span>
+            </div>
+
+            <ul>
+                <li>Designed and developed an AI-powered conversational assistant using Python and LLMs to deliver personalized mental health guidance and wellness recommendations.</li>
+                <li>Engineered structured prompt pipelines for contextual memory, tone control, and safety boundaries.</li>
+                <li>Applied NLP techniques for intent detection, contextual understanding, and dynamic response generation.</li>
+                <li>Integrated LLM APIs with optimized parameter tuning for reliable output control.</li>
+                <li>Implemented hallucination mitigation strategies using constrained instructions and validation logic.</li>
+                <li>Built modular and scalable architecture allowing integration into web or mobile interfaces.</li>
+            </ul>
+        </div>
+
+        <!-- PROJECT 2 -->
+        <div class="project-card">
+            <div class="module-label">MODULE_02</div>
+            <div class="project-title">PAYROLL MANAGEMENT SYSTEM</div>
+
+            <div class="tags">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">MySQL</span>
+                <span class="tag">Full-Stack Development</span>
+            </div>
+
+            <ul>
+                <li>Developed a responsive, cross-platform web application simulating real-world payroll, HR, and finance workflows.</li>
+                <li>Built user-focused interfaces for employee data management, salary processing, and report generation.</li>
+                <li>Emphasized usability, form validation, and data accuracy to reflect enterprise-grade system behavior.</li>
+                <li>Designed backend database schema for employee records, salary computation, and reporting logic.</li>
+            </ul>
+        </div>
+
+    </div>
+
+</body>
+</html>

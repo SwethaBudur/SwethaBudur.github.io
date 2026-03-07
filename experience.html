@@ -1,0 +1,220 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Experience | S Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <style>
+
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: #0a0f14;
+            color: #e0f7ff;
+            background-image: linear-gradient(rgba(0,255,255,0.05) 1px, transparent 1px),
+                              linear-gradient(90deg, rgba(0,255,255,0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            padding: 20px;
+            background: #000;
+            border-bottom: 1px solid #00ffff33;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #00ffff;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: white;
+        }
+
+        h1 {
+            text-align: center;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 42px;
+            margin-top: 40px;
+            color: #00ffff;
+            letter-spacing: 3px;
+        }
+
+        .experience-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 50px;
+            padding: 60px 20px;
+        }
+
+        /* FLIP CARD STRUCTURE */
+        .flip-card {
+            background: transparent;
+            width: 450px;
+            height: 520px;
+            perspective: 1000px;
+            cursor: pointer;
+        }
+
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: left;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+        }
+
+        .flip-card.active .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .flip-card-front, .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            background: #000;
+            border: 1px solid #00ffff;
+            box-shadow: 0 0 20px #00ffff55;
+            padding: 30px;
+        }
+
+        .flip-card-front {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .flip-card-back {
+            transform: rotateY(180deg);
+            overflow-y: auto;
+        }
+
+        .company {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: #00ffff;
+        }
+
+        .position {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .duration {
+            font-size: 14px;
+            color: #00ffffaa;
+        }
+
+        ul {
+            padding-left: 18px;
+            line-height: 1.6;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        @media (max-width: 768px) {
+            .flip-card {
+                width: 95%;
+                height: auto;
+            }
+
+            .flip-card-front,
+            .flip-card-back {
+                height: auto;
+                position: relative;
+                transform: none;
+            }
+
+            .flip-card-inner {
+                transform: none !important;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="skills.html">Skills</a>
+        <a href="experience.html">Experience</a>
+        <a href="projects.html">Projects</a>
+        <a href="education.html">Education</a>
+
+    </nav>
+
+    <h1>PROFESSIONAL_EXPERIENCE</h1>
+
+    <div class="experience-container">
+
+        <!-- IBM -->
+        <div class="flip-card" onclick="this.classList.toggle('active')">
+            <div class="flip-card-inner">
+
+                <div class="flip-card-front">
+                    <div class="company">IBM    (Client: Ericsson)</div>
+                    <div class="position">Application Developer</div>
+                    <div class="duration">Feb 2022 – Aug 2024</div>
+                </div>
+
+                <div class="flip-card-back">
+                    <ul>
+                        <li>Delivered R-State Extension Project integrating COBOL, DB2, JCL, CICS, VSAM across PLM systems.</li>
+                        <li>Optimized DB2 performance reducing CPU utilization by 15%.</li>
+                        <li>Worked with Endevor and supported migration to Git.</li>
+                        <li>Designed and maintained COBOL applications on IBM z/OS.</li>
+                        <li>Developed CICS programs with DB2 and VSAM handling.</li>
+                        <li>Created and scheduled complex JCL jobs and utilities.</li>
+                        <li>Performed production support and abend resolution.</li>
+                        <li>Debugged using Xpeditor and conducted root cause analysis.</li>
+                        <li>Executed system, regression, and performance testing.</li>
+                        <li>Participated in SCRUM and defect tracking via JIRA.</li>
+                        <li>Managed full SDLC lifecycle.</li>
+                        <li>Maintained Technicaldocumentation aligned with IBM standards.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Carelon -->
+        <div class="flip-card" onclick="this.classList.toggle('active')">
+            <div class="flip-card-inner">
+
+                <div class="flip-card-front">
+                    <div class="company">Carelon Global Solutions (Elevance Health)</div>
+                    <div class="position">Associate Software Engineer</div>
+                    <div class="duration">May 2021 – Jan 2022</div>
+                </div>
+
+                <div class="flip-card-back">
+                    <ul>
+                        <li>Supported healthcare enterprise claims and member enrollment systems.</li>
+                        <li>Worked extensively with DB2 queries and performance tuning.</li>
+                        <li>Optimized batch jobs improving execution time.</li>
+                        <li>Handled production monitoring and incident resolution.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
