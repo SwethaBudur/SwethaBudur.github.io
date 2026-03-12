@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Projects | S Portfolio</title>
+    <title>Projects | Swetha Reddy Budur</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Google Fonts -->
@@ -12,41 +12,30 @@
         body {
             margin: 0;
             font-family: 'Poppins', sans-serif;
-            background: #0a0f14;
+            background: #050810;
             color: #e0f7ff;
-            background-image: linear-gradient(rgba(0,255,255,0.05) 1px, transparent 1px),
-                              linear-gradient(90deg, rgba(0,255,255,0.05) 1px, transparent 1px);
-            background-size: 40px 40px;
+            background-image: radial-gradient(1400px 700px at 10% -10%, rgba(140,62,255,0.32) 0%, transparent 60%),
+                              radial-gradient(1100px 560px at 100% 15%, rgba(40,202,255,0.28) 0%, transparent 60%),
+                              radial-gradient(900px 560px at 30% 120%, rgba(26,255,213,0.24) 0%, transparent 60%);
         }
 
-        /* NAVBAR */
-        nav {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            padding: 20px;
-            background: #000;
-            border-bottom: 1px solid #00ffff33;
-        }
+        .nav { display: flex; justify-content: center; align-items: center; gap: 12px; padding: 14px 0; }
+        .nav-links { justify-self: center; display: flex; gap: 8px; flex-wrap: wrap; background: var(--card); padding: 8px; border-radius: 999px; border: 1px solid var(--border); box-shadow: var(--shadow); }
+        .nav-links a { color: var(--text); padding: 10px 16px; border-radius: 999px; font-weight: 600; transition: transform .2s ease, background .2s ease, color .2s ease; text-decoration: none; }
+        .nav-links a:hover { background: rgba(140,62,255,0.2); transform: translateY(-2px); text-decoration: none; }
 
-        nav a {
-            text-decoration: none;
-            color: #00ffff;
-            font-weight: 500;
-            transition: 0.3s;
+        header {
+          position: sticky; top: 0; z-index: 50;
+          backdrop-filter: saturate(180%) blur(12px);
+          background: linear-gradient(to bottom, rgba(5,8,16,0.85), transparent);
+          border-bottom: 1px solid var(--border);
         }
-
-        nav a:hover {
-            color: white;
-        }
-
-        /* PAGE TITLE */
         h1 {
             text-align: center;
             font-family: 'Orbitron', sans-serif;
             font-size: 42px;
             margin-top: 40px;
-            color: #00ffff;
+            color: #8c3eff;
             letter-spacing: 3px;
         }
 
@@ -62,22 +51,23 @@
         /* PROJECT CARD */
         .project-card {
             width: 520px;
-            background: #000;
-            border: 1px solid #00ffff;
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.12);
             padding: 30px;
-            box-shadow: 0 0 20px #00ffff55;
+            box-shadow: 0 20px 50px rgba(46, 160, 255, 0.35), inset 0 0 0 1px rgba(255,255,255,0.12);
             transition: 0.3s;
+            border-radius: 20px;
         }
 
         .project-card:hover {
-            box-shadow: 0 0 40px #00ffff;
+            box-shadow: 0 20px 50px rgba(40,202,255,0.35);
             transform: translateY(-5px);
         }
 
         .module-label {
             font-family: 'Orbitron', sans-serif;
             font-size: 14px;
-            color: #00ffffaa;
+            color: #77c7ff;
             margin-bottom: 15px;
         }
 
@@ -85,9 +75,10 @@
             font-family: 'Orbitron', sans-serif;
             font-size: 22px;
             margin-bottom: 20px;
-            border-left: 4px solid #00ffff;
+            border-left: 4px solid #28caff;
             padding-left: 15px;
             text-transform: uppercase;
+            color: #28caff;
         }
 
         .tags {
@@ -96,12 +87,14 @@
 
         .tag {
             display: inline-block;
-            border: 1px solid #00ffff;
+            border: 1px dashed rgba(255,255,255,0.12);
+            background-color: rgba(140,62,255,0.18);
             padding: 6px 12px;
             margin: 5px 5px 5px 0;
             font-size: 12px;
-            color: #00ffff;
+            color: #e0f7ff;
             font-family: 'Orbitron', sans-serif;
+            border-radius: 5px;
         }
 
         ul {
@@ -128,13 +121,17 @@
 <body>
 
     <!-- NAVIGATION -->
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="skills.html">Skills</a>
-        <a href="experience.html">Experience</a>
-        <a href="projects.html">Projects</a>
-        <a href="education.html">Education</a>
-    </nav>
+    <header>
+        <div class="nav">
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="skills.html">Skills</a>
+                <a href="experience.html">Experience</a>
+                <a href="projects.html">Projects</a>
+                <a href="education.html">Education</a>
+            </nav>
+        </div>
+    </header>
 
     <!-- PAGE TITLE -->
     <h1>PROJECT_MODULES</h1>
