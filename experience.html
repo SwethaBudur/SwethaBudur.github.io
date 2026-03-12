@@ -2,49 +2,72 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Experience | S Portfolio</title>
+    <title>Experience | Swetha Reddy Budur</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 
     <style>
+        /* =========================
+           Neon Color Palette
+        ==========================*/
+        :root {
+          --bg: #050810;
+          --bg-elev: rgba(5,8,16,0.85);
+          --text: #e0f7ff;
+          --muted: #77c7ff;
 
+          --primary: #8c3eff;
+          --primary-600: #6f29d9;
+          --blue: #28caff;
+          --teal: #1affd5;
+
+          --card: rgba(255,255,255,0.05);
+          --border: rgba(255,255,255,0.12);
+          --shadow: 0 20px 50px rgba(46, 160, 255, 0.35), inset 0 0 0 1px var(--border);
+          --radius: 20px;
+
+          --bg-aurora: radial-gradient(1400px 700px at 10% -10%, rgba(140,62,255,0.32) 0%, transparent 60%),
+                       radial-gradient(1100px 560px at 100% 15%, rgba(40,202,255,0.28) 0%, transparent 60%),
+                       radial-gradient(900px 560px at 30% 120%, rgba(26,255,213,0.24) 0%, transparent 60%);
+        }
+
+        * { box-sizing: border-box; }
+        html, body { height: 100%; }
         body {
-            margin: 0;
-            font-family: 'Poppins', sans-serif;
-            background: #0a0f14;
-            color: #e0f7ff;
-            background-image: linear-gradient(rgba(0,255,255,0.05) 1px, transparent 1px),
-                              linear-gradient(90deg, rgba(0,255,255,0.05) 1px, transparent 1px);
-            background-size: 40px 40px;
+          margin: 0;
+          font-family: 'Poppins', sans-serif;
+          color: var(--text);
+          background: var(--bg);
+          background-image: var(--bg-aurora);
+          line-height: 1.6;
+          text-rendering: optimizeLegibility;
+          overflow-x: hidden;
         }
 
-        nav {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            padding: 20px;
-            background: #000;
-            border-bottom: 1px solid #00ffff33;
-        }
+        a { color: var(--blue); font-weight: 600; text-decoration: none; }
+        a:hover { color: var(--primary); }
 
-        nav a {
-            text-decoration: none;
-            color: #00ffff;
-            font-weight: 500;
+        header {
+          position: sticky; top: 0; z-index: 50;
+          backdrop-filter: saturate(180%) blur(12px);
+          background: linear-gradient(to bottom, rgba(5,8,16,0.85), transparent);
+          border-bottom: 1px solid var(--border);
         }
+        .nav { display: flex; justify-content: center; align-items: center; gap: 12px; padding: 14px 0; }
+        .nav-links { justify-self: center; display: flex; gap: 8px; flex-wrap: wrap; background: var(--card); padding: 8px; border-radius: 999px; border: 1px solid var(--border); box-shadow: var(--shadow); }
+        .nav-links a { color: var(--text); padding: 10px 16px; border-radius: 999px; font-weight: 600; transition: transform .2s ease, background .2s ease, color .2s ease; text-decoration: none; }
+        .nav-links a:hover { background: rgba(140,62,255,0.2); transform: translateY(-2px); text-decoration: none; }
 
-        nav a:hover {
-            color: white;
-        }
+        .container { width: min(1100px, 92vw); margin: 0 auto; padding: 24px 0 72px; }
+        .section { margin-top: 12px; }
+        .section h2 { font-size: 28px; letter-spacing: .5px; margin: 8px 0 32px; color: var(--primary); text-align: center; font-family: 'Orbitron', sans-serif; font-size: 42px; }
 
         h1 {
             text-align: center;
             font-family: 'Orbitron', sans-serif;
             font-size: 42px;
             margin-top: 40px;
-            color: #00ffff;
+            color: #8c3eff;
             letter-spacing: 3px;
         }
 
@@ -83,10 +106,11 @@
             width: 100%;
             height: 100%;
             backface-visibility: hidden;
-            background: #000;
-            border: 1px solid #00ffff;
-            box-shadow: 0 0 20px #00ffff55;
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.12);
+            box-shadow: 0 20px 50px rgba(46, 160, 255, 0.35), inset 0 0 0 1px rgba(255,255,255,0.12);
             padding: 30px;
+            border-radius: 20px;
         }
 
         .flip-card-front {
@@ -104,7 +128,7 @@
             font-family: 'Orbitron', sans-serif;
             font-size: 22px;
             margin-bottom: 15px;
-            color: #00ffff;
+            color: #28caff;
         }
 
         .position {
@@ -114,7 +138,7 @@
 
         .duration {
             font-size: 14px;
-            color: #00ffffaa;
+            color: #77c7ff;
         }
 
         ul {
@@ -126,9 +150,10 @@
             margin-bottom: 8px;
         }
 
+        footer { margin-top: 60px; padding: 30px 0 16px; color: var(--muted); font-size: 14px; text-align: center; border-top: 1px dashed var(--border); }
+
         @media (max-width: 768px) {
             .flip-card {
-                width: 95%;
                 height: auto;
             }
 
@@ -136,83 +161,79 @@
             .flip-card-back {
                 height: auto;
                 position: relative;
-                transform: none;
+                transform: none !important;
             }
 
             .flip-card-inner {
                 transform: none !important;
             }
         }
-
     </style>
 </head>
 
 <body>
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="skills.html">Skills</a>
-        <a href="experience.html">Experience</a>
-        <a href="projects.html">Projects</a>
-        <a href="education.html">Education</a>
-
-    </nav>
+    <header>
+        <div class="nav">
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="skills.html">Skills</a>
+                <a href="experience.html">Experience</a>
+                <a href="projects.html">Projects</a>
+                <a href="education.html">Education</a>
+            </nav>
+        </div>
+    </header>
 
     <h1>PROFESSIONAL_EXPERIENCE</h1>
 
     <div class="experience-container">
 
-        <!-- IBM -->
-        <div class="flip-card" onclick="this.classList.toggle('active')">
-            <div class="flip-card-inner">
-
-                <div class="flip-card-front">
-                    <div class="company">IBM    (Client: Ericsson)</div>
-                    <div class="position">Application Developer</div>
-                    <div class="duration">Feb 2022 – Aug 2024</div>
+                <!-- IBM -->
+                <div class="flip-card" onclick="this.classList.toggle('active')">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="company">IBM    (Client: Ericsson)</div>
+                            <div class="position">Application Developer</div>
+                            <div class="duration">Feb 2022 – Aug 2024</div>
+                        </div>
+                        <div class="flip-card-back">
+                            <ul>
+                                <li>Delivered R-State Extension Project integrating COBOL, DB2, JCL, CICS, VSAM across PLM systems.</li>
+                                <li>Optimized DB2 performance reducing CPU utilization by 15%.</li>
+                                <li>Worked with Endevor and supported migration to Git.</li>
+                                <li>Designed and maintained COBOL applications on IBM z/OS.</li>
+                                <li>Developed CICS programs with DB2 and VSAM handling.</li>
+                                <li>Created and scheduled complex JCL jobs and utilities.</li>
+                                <li>Performed production support and abend resolution.</li>
+                                <li>Debugged using Xpeditor and conducted root cause analysis.</li>
+                                <li>Executed system, regression, and performance testing.</li>
+                                <li>Participated in SCRUM and defect tracking via JIRA.</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="flip-card-back">
-                    <ul>
-                        <li>Delivered R-State Extension Project integrating COBOL, DB2, JCL, CICS, VSAM across PLM systems.</li>
-                        <li>Optimized DB2 performance reducing CPU utilization by 15%.</li>
-                        <li>Worked with Endevor and supported migration to Git.</li>
-                        <li>Designed and maintained COBOL applications on IBM z/OS.</li>
-                        <li>Developed CICS programs with DB2 and VSAM handling.</li>
-                        <li>Created and scheduled complex JCL jobs and utilities.</li>
-                        <li>Performed production support and abend resolution.</li>
-                        <li>Debugged using Xpeditor and conducted root cause analysis.</li>
-                        <li>Executed system, regression, and performance testing.</li>
-                        <li>Participated in SCRUM and defect tracking via JIRA.</li>
-                        <li>Managed full SDLC lifecycle.</li>
-                        <li>Maintained Technicaldocumentation aligned with IBM standards.</li>
-                    </ul>
+                <!-- Carelon -->
+                <div class="flip-card" onclick="this.classList.toggle('active')">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="company">Carelon Global Solutions</div>
+                            <div class="position">Associate Software Engineer</div>
+                            <div class="duration">May 2021 – Jan 2022</div>
+                        </div>
+                        <div class="flip-card-back">
+                            <ul>
+                                <li>Supported healthcare enterprise claims and member enrollment systems.</li>
+                                <li>Worked extensively with DB2 queries and performance tuning.</li>
+                                <li>Optimized batch jobs improving execution time.</li>
+                                <li>Handled production monitoring and incident resolution.</li>
+                                <li>Implemented data validation and error handling routines.</li>
+                                <li>Collaborated with cross-functional teams on system enhancements.</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-
-            </div>
-        </div>
-
-        <!-- Carelon -->
-        <div class="flip-card" onclick="this.classList.toggle('active')">
-            <div class="flip-card-inner">
-
-                <div class="flip-card-front">
-                    <div class="company">Carelon Global Solutions (Elevance Health)</div>
-                    <div class="position">Associate Software Engineer</div>
-                    <div class="duration">May 2021 – Jan 2022</div>
-                </div>
-
-                <div class="flip-card-back">
-                    <ul>
-                        <li>Supported healthcare enterprise claims and member enrollment systems.</li>
-                        <li>Worked extensively with DB2 queries and performance tuning.</li>
-                        <li>Optimized batch jobs improving execution time.</li>
-                        <li>Handled production monitoring and incident resolution.</li>
-                    </ul>
-                </div>
-
-            </div>
-        </div>
 
     </div>
 
