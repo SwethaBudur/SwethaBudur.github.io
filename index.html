@@ -1,179 +1,277 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>SWETHA REDDY BUDUR | Portfolio</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <title>Swetha Reddy Budur | Software Engineer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Portfolio of Swetha Reddy Budur — Software Engineer focused on AI, cloud, and enterprise systems." />
+  <meta name="author" content="Swetha Reddy Budur" />
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet"/>
 
-    <style>
+  <style>
+    /* =========================
+       Neon Color Palette
+    ==========================*/
+    :root {
+      --bg: #050810;
+      --bg-elev: rgba(5,8,16,0.85);
+      --text: #e0f7ff;
+      --muted: #77c7ff;
 
-        body {
-            margin: 0;
-            font-family: 'Poppins', sans-serif;
-            background: #07131c;
-            color: #ffffff;
-            text-align: center;
-        }
+      --primary: #8c3eff;    /* Neon Purple */
+      --primary-600: #6f29d9;
+      --blue: #28caff;       /* Electric Cyan */
+      --teal: #1affd5;       /* Bright Teal */
 
-        /* NAVBAR */
-        nav {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            padding: 20px;
-            background: #0b1f2a;
-            border-bottom: 1px solid #00f7ff30;
-        }
+      --card: rgba(255,255,255,0.05);
+      --border: rgba(255,255,255,0.12);
+      --shadow: 0 20px 50px rgba(46, 160, 255, 0.35), inset 0 0 0 1px var(--border);
+      --radius: 20px;
+      --ring: 0 0 0 10px rgba(140, 62, 255, 0.25);
 
-        nav a {
-            text-decoration: none;
-            color: #00f7ff;
-            font-weight: 500;
-            transition: 0.3s;
-        }
+      /* Background presets */
+      --bg-aurora: radial-gradient(1400px 700px at 10% -10%, rgba(140,62,255,0.32) 0%, transparent 60%),
+                   radial-gradient(1100px 560px at 100% 15%, rgba(40,202,255,0.28) 0%, transparent 60%),
+                   radial-gradient(900px 560px at 30% 120%, rgba(26,255,213,0.24) 0%, transparent 60%);
 
-        nav a:hover {
-            text-shadow: 0 0 10px #00f7ff;
-        }
+      --bg-grid: repeating-linear-gradient(0deg, rgba(255,255,255,0.06) 0 1px, transparent 1px 36px),
+                 repeating-linear-gradient(90deg, rgba(255,255,255,0.06) 0 1px, transparent 1px 36px),
+                 radial-gradient(1200px 600px at 70% -10%, rgba(40,202,255,0.22), transparent 60%),
+                 radial-gradient(900px 500px at 10% 120%, rgba(140,62,255,0.24), transparent 60%);
 
-        .button {
-            background: transparent;
-            border: 1px solid #00f7ff;
-            padding: 8px 20px;
-            border-radius: 20px;
-        }
+      --bg-circuit: url("data:image/svg+xml;utf8,\
+        <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 600'>\
+          <defs>\
+            <linearGradient id='g' x1='0' y1='0' x2='1' y2='1'>\
+              <stop stop-color='%238c3eff' stop-opacity='0.9' offset='0'/>\
+              <stop stop-color='%2328caff' stop-opacity='0.9' offset='1'/>\
+            </linearGradient>\
+            <filter id='glow'><feGaussianBlur stdDeviation='2.2' result='b'/><feMerge><feMergeNode in='b'/><feMergeNode in='SourceGraphic'/></feMerge></filter>\
+          </defs>\
+          <g stroke='url(%23g)' stroke-width='1.5' fill='none' filter='url(%23glow)' opacity='0.9'>\
+            <path d='M0,520 C160,485 320,460 500,430 C670,402 860,380 1200,350'/>\
+            <path d='M0,420 C180,390 340,360 560,330 C760,300 980,280 1200,260'/>\
+            <path d='M0,300 C160,280 360,250 640,220 C860,195 1040,180 1200,165'/>\
+            <circle cx='220' cy='365' r='3'/><circle cx='640' cy='220' r='3'/><circle cx='1020' cy='275' r='3' fill='%231affd5'/>\
+          </g>\
+        </svg>");
 
-        .button:hover {
-            background: #00f7ff;
-            color: #07131c;
-            box-shadow: 0 0 15px #00f7ff;
-        }
+      --hero-bg: var(--bg-aurora);
+    }
 
-        /* HERO SECTION */
-        .hero {
-            padding: 50px 30px 60px;
-        }
+    /* =========================
+       Base styles
+    ==========================*/
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      background-image: var(--hero-bg);
+      line-height: 1.6;
+      text-rendering: optimizeLegibility;
+      overflow-x: hidden;
+      transition: background 0.5s ease, color 0.3s ease;
+    }
+    a { color: var(--blue); font-weight: 600; }
+    a:hover { color: var(--primary); text-decoration: underline; }
+    .container { width: min(1100px, 92vw); margin: 0 auto; padding: 20px 0 60px; }
 
-        .profile-pic {
-            width: 170px;
-            height: 170px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid #00f7ff;
-            box-shadow: 0 0 25px #00f7ff50;
-        }
+    /* =========================
+       Header / Nav
+    ==========================*/
+    header {
+      position: sticky; top: 0; z-index: 50;
+      backdrop-filter: saturate(180%) blur(12px);
+      background: linear-gradient(to bottom, rgba(5,8,16,0.85), transparent);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav { display: flex; justify-content: center; align-items: center; gap: 12px; padding: 14px 0; }
+    .brand { display: flex; align-items: center; gap: 10px; font-weight: 800; letter-spacing: .3px; }
+    .brand .dot { width: 14px; height: 14px; border-radius: 50%; background: linear-gradient(135deg, var(--primary), var(--teal)); box-shadow: 0 0 20px rgba(40,202,255,.7); }
+    .nav-links { justify-self: center; display: flex; gap: 8px; flex-wrap: wrap; background: var(--card); padding: 8px; border-radius: 999px; border: 1px solid var(--border); box-shadow: var(--shadow); }
+    .nav-links a { color: var(--text); padding: 10px 16px; border-radius: 999px; font-weight: 600; transition: transform .2s ease, background .2s ease, color .2s ease; text-decoration: none; }
+    .nav-links a:hover { background: rgba(140,62,255,0.2); transform: translateY(-2px); text-decoration: none; }
+    .nav-links a.active { background: var(--primary); color: #fff; }
+    .controls { justify-self: end; display: flex; align-items: center; gap: 10px; }
+    .btn-ctrl { border: 1px solid var(--border); background: var(--bg-elev); color: var(--text); padding: 8px 14px; border-radius: 14px; font-weight: 700; cursor: pointer; box-shadow: var(--shadow); transition: transform .2s ease, box-shadow .2s ease; }
+    .btn-ctrl:hover { transform: translateY(-1px); }
+    .btn-ctrl:focus-visible { outline: none; box-shadow: var(--ring); }
 
-        h1 {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 60px;
-            margin: 25px 0 10px;
-            color: #00f7ff;
-            letter-spacing: 3px;
-        }
+    /* =========================
+       Hero
+    ==========================*/
+    .hero { position: relative; isolation: isolate; margin: 20px 0 0 0; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--border); box-shadow: var(--shadow); background: linear-gradient(180deg, rgba(0,0,0,0.18), rgba(0,0,0,0.28)); width: 100%; }
+    .grain { position: absolute; inset: 0; pointer-events: none; opacity: .18; mix-blend-mode: overlay; z-index: 0; }
+    .hero-inner { position: relative; z-index: 1; display: grid; place-items: center; text-align: center; padding: clamp(20px, 3vw, 50px) clamp(16px, 4vw, 40px); }
 
-        h2 {
-            font-weight: 400;
-            color: #ccc;
-            margin-bottom: 20px;
-        }
+    .avatar { width: 172px; height: 172px; border-radius: 50%; overflow: hidden; border: 2px solid rgba(255,255,255,0.5); box-shadow: 0 22px 48px rgba(40,202,255,0.45); background: rgba(0,0,0,0.24); backdrop-filter: blur(3px); margin-bottom: 0; }
+    .avatar-name { font-family: 'Orbitron', sans-serif; font-size: clamp(28px, 4vw + 1rem, 48px); font-weight: 900; color: var(--text); margin-top: 10px; letter-spacing: 0.5px; }
+    .avatar img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
-        p {
-            max-width: 700px;
-            margin: 20px auto;
-            line-height: 1.8;
-            color: #aaa;
-            font-size: 16px;
-        }
+    h1 { font-family: 'Orbitron', sans-serif; font-size: clamp(24px, 2.5vw + 0.5rem, 36px); line-height: 1.12; font-weight: 900; text-shadow: 0 1px 22px rgba(0,0,0,.28); color: var(--primary); margin-top: 8px; margin-bottom: 4px; }
+    .subtitle { font-size: clamp(16px, 1.4vw + .5rem, 22px); font-weight: 700; text-shadow: 0 1px 14px rgba(0,0,0,.25); color: var(--blue); margin-bottom: 8px; }
 
-        /* CONTACT SECTION */
-        .contact-section {
-            margin-top: 40px;
-            padding-bottom: 80px;
-        }
+    .tagline { margin-top: 16px; color: var(--text); font-size: 17px; line-height: 1.8; max-width: 880px;
+      background: rgba(5,8,16,0.32); border: 1px solid rgba(255,255,255,0.15); backdrop-filter: blur(10px) saturate(150%); border-radius: var(--radius); padding: clamp(14px, 3vw, 20px); }
 
-        .contact-section h3 {
-            font-family: 'Orbitron', sans-serif;
-            color: #00f7ff;
-            letter-spacing: 3px;
-            margin-bottom: 40px;
-        }
+    .cta-row { margin-top: 22px; display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; }
+    .hero .cta-row { display: none; }
+    .btn { display: inline-flex; align-items: center; gap: 12px; padding: 14px 20px; border-radius: 16px; border: 1px solid var(--border); font-weight: 900; letter-spacing: .3px; transition: transform .15s ease, filter .15s ease, box-shadow .15s ease; }
+    .btn.primary { background: linear-gradient(90deg, var(--primary), var(--blue)); box-shadow: 0 18px 36px rgba(140,62,255,0.35); color: #fff; }
+    .btn.primary:hover { transform: translateY(-2px); filter: brightness(1.08); }
+    .btn.ghost { background: rgba(255,255,255,0.05); color: var(--text); box-shadow: var(--shadow); }
+    .btn.ghost:hover { transform: translateY(-2px); filter: brightness(1.05); }
 
-        .contact-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            flex-wrap: wrap;
-        }
+    /* =========================
+       Sections / Cards
+    ==========================*/
+    .section { margin-top: 40px; padding: 0 12px; }
+    .section h2 { font-family: 'Orbitron', sans-serif; font-size: 24px; letter-spacing: .5px; margin: 8px 0 16px; color: var(--primary); }
+    .grid { display: grid; gap: 24px; margin: 20px 0; }
+    .grid-3 { grid-template-columns: repeat(3, minmax(0,1fr)); }
+    .grid-2 { grid-template-columns: repeat(2, minmax(0,1fr)); }
+    @media (max-width: 900px) { .grid-3, .grid-2 { grid-template-columns: 1fr; } }
 
-        .contact-buttons a {
-            text-decoration: none;
-            color: #00f7ff;
-            border: 1px solid #00f7ff;
-            padding: 14px 30px;
-            border-radius: 30px;
-            transition: 0.3s ease;
-            font-weight: 500;
-        }
+    .card { background: rgba(255,255,255,0.04); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; box-shadow: var(--shadow); transition: transform .2s ease, box-shadow .2s ease; width: 100%; }
+    .card:hover { transform: translateY(-2px); box-shadow: 0 20px 50px rgba(40,202,255,0.35); }
+    .card h3 { font-family: 'Orbitron', sans-serif; margin: 6px 0 10px; color: var(--blue); }
+    .kpis { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 10px; }
+    .kpi { background: rgba(140,62,255,0.18); border: 1px dashed var(--border); padding: 8px 14px; border-radius: 999px; font-weight: 800; }
 
-        .contact-buttons a:hover {
-            background: #00f7ff;
-            color: #07131c;
-            box-shadow: 0 0 20px #00f7ff;
-            transform: translateY(-5px);
-        }
+    footer { margin-top: 60px; padding: 30px 0 16px; color: var(--muted); font-size: 14px; text-align: center; border-top: 1px dashed var(--border); }
 
-        /* Responsive */
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 38px;
-            }
-
-            .contact-buttons {
-                gap: 20px;
-            }
-        }
-
-    </style>
+    /* Responsive */
+    @media (max-width: 760px) { .nav { grid-template-columns: 1fr; } .nav-links, .controls { justify-content: center; } .btn { width: 100%; justify-content: center; } }
+  </style>
 </head>
-
 <body>
-
-    <!-- NAVIGATION -->
-    <nav>
-        <a href="index.html">Home</a>
+  <header>
+    <div class="container nav">
+      <nav class="nav-links">
+        <a class="active" href="index.html">Home</a>
         <a href="skills.html">Skills</a>
         <a href="experience.html">Experience</a>
         <a href="projects.html">Projects</a>
         <a href="education.html">Education</a>
-        
-    </nav>
-
-    <!-- HERO SECTION -->
-    <div class="hero">
-
-        <img src="pic.jpeg" class="profile-pic">
-
-        <h1>SWETHA REDDY BUDUR</h1>
-
-        <h2>SOFTWARE ENGINEER</h2>
-
-        <p1>
-            I’m Swetha Budur, a graduate student in Computer Science at Rowan University with 3+ years of professional experience in mainframe,Java development and cloud platforms. I bridge enterprise systems with AI-driven solutions, from optimizing Db2 and z/OS databases to building NLP and LLM-based chatbots. Skilled in Java, Python, SQL, and cloud platforms, I deliver scalable and maintainable solutions while exploring innovative applications of AI and NLP to enhance real-world software systems.
-        </p1>
-
-        <!-- CONTACT SECTION AT END -->
-        <div class="contact-section">
-            <h3>ESTABLISH_CONNECTION</h3>
-
-            <div class="contact-buttons">
-                <a href="https://www.linkedin.com/in/swetha-reddy-b-189a731b7/" target="_blank">🔗 LinkedIn</a>
-                <a href="mailto:swethabudur1234@gmail.com" target="_blank">📧 Email</a>
-            </div>
-        </div>
-
+      </nav>
     </div>
+  </header>
 
+  <main class="container">
+    <section class="hero">
+      <div class="grain"></div>
+      <div class="hero-inner">
+        <div class="avatar"><img src="pic.jpeg" alt="Profile photo of Swetha Reddy Budur"></div>
+        <div class="avatar-name">SWETHA REDDY BUDUR</div>
+        <h1>Software Engineer</h1>
+        <p class="tagline">
+          I’m Swetha Budur, a graduate student in Computer Science at Rowan University with 3+ years of professional experience in mainframe,Java development and cloud platforms. I bridge enterprise systems with AI-driven solutions, from optimizing Db2 and z/OS databases to building NLP and LLM-based chatbots. Skilled in Java, Python, SQL, and cloud platforms, I deliver scalable and maintainable solutions while exploring innovative applications of AI and NLP to enhance real-world software systems.
+        </p>
+        <div class="cta-row">
+          <a class="btn primary" href="https://www.linkedin.com/in/swetha-reddy-b-189a731b7/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn ghost" href="resume.pdf" target="_blank" rel="noopener">Resume</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>What I Bring</h2>
+      <div class="grid grid-3">
+        <article class="card">
+          <h3>Enterprise to AI</h3>
+          <p>Architect intelligent systems that connect mainframe-scale databases (Db2/z/OS) with modern AI/NLP workloads. Build end-to-end solutions that modernize legacy enterprise infrastructure.</p>
+          <div class="kpis"><span class="kpi">Db2 / z/OS</span><span class="kpi">Java</span><span class="kpi">Python</span><span class="kpi">LLM / NLP</span></div>
+        </article>
+        <article class="card">
+          <h3>Performance & Reliability</h3>
+          <p>DeliverHigh-availability systems through deep-dive performance optimization: query tuning, bottleneck identification, throughput scaling, and cost reduction. Implement observability-first architectures with metrics, tracing, and alerting for measurable SLA impact.</p>
+          <div class="kpis"><span class="kpi">Query Opt</span><span class="kpi">Observability</span><span class="kpi">System Scaling</span></div>
+        </article>
+        <article class="card">
+          <h3>Product Impact</h3>
+          <p>Build secure, scalable systems that teams trust. Simplify complex operations through smart automation and intuitive APIs, directly reducing costs and enabling faster delivery.</p>
+          <div class="kpis"><span class="kpi">Security</span><span class="kpi">API Design</span><span class="kpi">Automation</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Selected Work</h2>
+      <div class="grid grid-2">
+        <article class="card">
+          <h3>LLM CHAT BOT</h3>
+          <p>Engineered a production-grade LLM-powered support platform using Python and RAG techniques. Integrated domain knowledge bases with OpenAI APIs, implemented safety guardrails, and achieved 40% faster query resolution.</p>
+          <p><a href="projects.html">See details →</a></p>
+        </article>
+        <article class="card">
+          <h3>Db2 Tuning & Automation</h3>
+          <p>Improved Db2/z/OS query paths and automated routine operations, reducing toil and improving SLAs.</p>
+          <p><a href="projects.html">See details →</a></p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Let’s Connect</h2>
+      <div class="card">
+        <p>Open to Software Engineer and ML/AI roles where systems thinking meets product impact.</p>        <div class="cta-row" style="margin-top: 16px;">
+          <a class="btn primary" href="https://www.linkedin.com/in/swetha-reddy-b-189a731b7/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn primary" href="mailto:your-email@example.com">Email</a>
+        </div>      </div>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Swetha Reddy Budur • Built with HTML &amp; CSS
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Theme toggle
+    const root = document.documentElement;
+    const themeBtn = document.getElementById('themeToggle');
+    const themeLabel = document.getElementById('themeLabel');
+    const themeIcon = document.getElementById('themeIcon');
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'light') root.classList.add('light');
+    function syncTheme() {
+      const isLight = root.classList.contains('light');
+      themeLabel.textContent = isLight ? 'Light' : 'Dark';
+      themeIcon.textContent = isLight ? '☀️' : '🌙';
+    }
+    syncTheme();
+    themeBtn.addEventListener('click', () => {
+      const isLight = root.classList.toggle('light');
+      localStorage.setItem('theme', isLight ? 'light' : 'dark');
+      syncTheme();
+    });
+
+    // Background switcher
+    const bgBtn = document.getElementById('bgToggle');
+    const bgLabel = document.getElementById('bgLabel');
+    const bgOptions = [
+      { css: '--bg-aurora', label: 'Aurora' },
+      { css: '--bg-grid', label: 'Neon Grid' },
+      { css: '--bg-circuit', label: 'Circuit Weave' }
+    ];
+    let idx = parseInt(localStorage.getItem('bgIndex') || '0', 10);
+    function applyBg(i) {
+      const val = getComputedStyle(root).getPropertyValue(bgOptions[i].css);
+      root.style.setProperty('--hero-bg', val);
+      document.body.style.backgroundImage = val;
+      bgLabel.textContent = bgOptions[i].label;
+      localStorage.setItem('bgIndex', String(i));
+    }
+    applyBg(idx);
+    bgBtn.addEventListener('click', () => { idx = (idx + 1) % bgOptions.length; applyBg(idx); });
+  </script>
 </body>
 </html>
